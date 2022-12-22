@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Background"
+    tools:context=".AddItemActivity">
+
+    <TextView
+        android:id="@+id/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item:"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/title"
+        android:layout_marginTop="40dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/label"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="14dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/TitleText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ItemNameEdit"
+        android:layout_width="172dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NameText" />
+
+    <TextView
+        android:id="@+id/ItemNoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item No"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/label"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/TitleText"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/ItemNoEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/lighter_gray"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ItemNoText" />
+
+    <TextView
+        android:id="@+id/QuantityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="14dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/ItemNameEdit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/QuantityEdit"
+        android:layout_width="49dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+
+        android:hint="Qty"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuantityText" />
+
+
+    <Button
+        android:id="@+id/cancel_button"
+        android:text="Cancel"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintRight_toLeftOf="@+id/add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/QuantityEdit"
+        android:onClick="onCancelClicked"/>
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="28dp"
+        android:backgroundTint="@color/green_500"
+        app:layout_constraintLeft_toRightOf="@+id/cancel_button"
+        android:text="Add"
+        app:layout_constraintTop_toBottomOf="@+id/QuantityEdit"
+        tools:layout_editor_absoluteX="148dp"
+        android:onClick="onAddClicked" />
+
+
+    <TextView
+        android:id="@id/dialog_fragment_container"
+
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemsActivity"
+    style="@style/Background">
+
+    <FrameLayout
+        android:id="@+id/dialog_fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:columnCount="4"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-16dp">
+
+        <TextView
+            android:layout_columnSpan="4"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:text="Current Inventory"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:background="#8CDD81"
+            android:text="Item No."
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:background="#8CDD81"
+            android:text="Name"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:background="#8CDD81"
+            android:text="Quantity"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="@color/blue"
+            android:src="@drawable/add_circle_fab"
+            android:onClick="onAddButtonClicked"/>
+
+        <View
+            style="@style/HorizontalLine"
+            android:layout_marginTop="10dp"/>
+
+        <ListView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/listView"
+            android:layout_columnSpan="4"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="200dp"
+            tools:context=".ItemsActivity">
+        </ListView>
+
+
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
